@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import '../countdown.dart';
 
-class Running extends StatefulWidget {
-  @override
-  _RunningState createState() => _RunningState();
-}
-
-class _RunningState extends State<Running> {
+class Run extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(

@@ -48,6 +48,5 @@ class _SplashState extends State<Splash> {
     print("checkauth!!!");
     await Future.delayed(Duration(seconds: 3));
     BlocProvider.of(context).authBloc.checkAuth();
-    //임의로 로그인 됐음을 변경해줌
   }
 }

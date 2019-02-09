@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "502210800349",
+    "firebase_url": "https://bloc-test-f28e1.firebaseio.com",
+    "project_id": "bloc-test-f28e1",
+    "storage_bucket": "bloc-test-f28e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502210800349:android:874fc96f8ebf6872",
+        "android_client_info": {
+          "package_name": "yhk.handong.edu.bloctest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502210800349-1cm4p6lbuehjsotjrdam62u73jivcb2a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yhk.handong.edu.bloctest",
+            "certificate_hash": "6d1b3fda846625f5ee98887ccebb2e1a59eee57a"
+          }
+        },
+        {
+          "client_id": "502210800349-9fe1sftj1dpbcne0et22c6v7atdnd0os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVxmqK_4MNNF7hgNIgkbGXMdJmpBn3DBs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502210800349-9fe1sftj1dpbcne0et22c6v7atdnd0os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

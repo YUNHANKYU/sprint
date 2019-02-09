@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'timer.dart';
+import '../countdown.dart';
 
 class Running extends StatefulWidget {
   @override
@@ -14,7 +14,7 @@ class _RunningState extends State<Running> {
         onPressed: () => Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => Timer())),
+                builder: (context) => Countdown())),
         child: Text("Start"),
       ),
     );

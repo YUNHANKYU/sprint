@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'lotto.dart';
-import 'my_record.dart';
-import 'run.dart';
-import 'challenge.dart';
-import 'mypage.dart';
+import 'lottoTab/lotto.dart';
+import 'mypageTab/mypage.dart';
+import 'runTab/run.dart';
+import 'challengeTab/challenge.dart';
+import 'myRecordTab/myRecord.dart';
 
 class Home extends StatefulWidget {
   @override

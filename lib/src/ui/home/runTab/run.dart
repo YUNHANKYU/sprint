@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../countdown.dart';
+import '../../countdown.dart';
 
 class Run extends StatelessWidget {
   @override

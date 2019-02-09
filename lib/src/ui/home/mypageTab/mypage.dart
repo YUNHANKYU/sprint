@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../blocs/bloc_provider.dart';
+import '../../../blocs/bloc_provider.dart';
 
 class MyPage extends StatefulWidget {
   @override

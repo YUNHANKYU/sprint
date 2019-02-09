@@ -44,10 +44,12 @@ class FirebaseAuthentication {
       print(error);
     });
 
+    print("resources firebase user checked");
     return docSnap.exists;
   }
 
   Future<FirebaseUser> getFirebaseUser() {
+    print("getFirebaseUser");
     return _auth.currentUser();
   }
 

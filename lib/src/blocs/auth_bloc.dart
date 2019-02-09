@@ -1,9 +1,7 @@
 import 'dart:async';
 import '../resources/firebase_auth.dart';
 
-enum Gender {
-  male, female
-}
+enum Gender { male, female }
 
 class AuthBloc extends Object {
   final _firebaseAuth = FirebaseAuthentication();
@@ -11,9 +9,11 @@ class AuthBloc extends Object {
   final _doneLoading = StreamController<bool>.broadcast();
 
   Stream<bool> get loggedIn => _loggedIn.stream;
+
   Stream<bool> get doneLoading => _doneLoading.stream;
 
   Function(bool) get setLoggedIn => _loggedIn.sink.add;
+
   Function(bool) get setLoading => _doneLoading.sink.add;
 
   Future<bool> googleSignIn() {
@@ -21,12 +21,16 @@ class AuthBloc extends Object {
   }
 
   Future<void> checkAuth() async {
-    if(await _firebaseAuth.checkAuth(await _firebaseAuth.getFirebaseUser()))
+    print("AuthBloc checkAuth start");
+    if (await _firebaseAuth.checkAuth(await _firebaseAuth.getFirebaseUser())) {
+      print("AuthBloc checkAuth true");
+      setLoading(false);
       setLoggedIn(true);
-    else
+    } else {
+      print("AuthBloc checkAuth true");
       setLoggedIn(false);
+    }
   }
-
 
   AuthBloc() {
     init();

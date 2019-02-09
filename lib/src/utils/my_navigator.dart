@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../ui/home.dart';
+import '../ui/home/home.dart';
 
 
 class MyNavigator {

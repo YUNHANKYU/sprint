@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'home/running.dart';
 
 class Countdown extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _CountdownState extends State<Countdown> with TickerProviderStateMixin {
       duration: Duration(seconds: 3),
     );
     reverseTimer();
-    Timer(controller.duration, running);
+    Timer(controller.duration, goRunning);
   }
 
   @override
@@ -34,6 +35,9 @@ class _CountdownState extends State<Countdown> with TickerProviderStateMixin {
             builder: (BuildContext context, Widget child) {
               return Text(
                 timerString,
+                style: TextStyle(
+                  fontSize: 100,
+                ),
               );
             }),
       ),
@@ -46,8 +50,9 @@ class _CountdownState extends State<Countdown> with TickerProviderStateMixin {
     controller.dispose();
   }
 
-  void running(){
-
+  void goRunning(){
+    print("gogo");
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => Running()));
   }
 
   void reverseTimer() {

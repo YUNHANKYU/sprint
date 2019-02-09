@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'lotto.dart';
 import 'my_record.dart';
-import 'running.dart';
+import 'run.dart';
 import 'challenge.dart';
 import 'mypage.dart';
 
@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
     final List<Widget> _children = [
       new Lotto(), //응모함
       new MyRecord(), //나의 기록
-      new Running(), //런닝
+      new Run(), //런닝
       new Challenge(),  //챌런지
       new MyPage()  //마이페이지
     ];

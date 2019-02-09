@@ -1,4 +1,4 @@
-# bloc_test
+# Sprint App
 
 A new Flutter application.
 

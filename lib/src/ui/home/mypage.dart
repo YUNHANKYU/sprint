@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../blocs/bloc_provider.dart';
+import '../../blocs/bloc_provider.dart';
 
 class MyPage extends StatefulWidget {
   @override
@@ -12,7 +12,6 @@ class _MyPageState extends State<MyPage> {
     return Center(
       child: Container(
         child: RaisedButton(
-// signout button
           onPressed: () => BlocProvider.of(context).authBloc.setLoggedIn(false),
           child: Text("Sign Out"),
           color: Colors.red,

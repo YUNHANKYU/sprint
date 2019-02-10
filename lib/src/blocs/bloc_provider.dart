@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../blocs/auth_bloc.dart' show AuthBloc;
-import '../blocs/login_bloc.dart' show LoginBloc;
+import '../blocs/run_bloc.dart' show RunBloc;
 
 class BlocProvider extends InheritedWidget {
   final blocState = new _BlocState(
-    authBloc: AuthBloc(),
-    loginBloc: LoginBloc()
+      authBloc: AuthBloc(),
+      runBloc: RunBloc()
   );
 
   BlocProvider({Key key, Widget child}) : super(key: key, child: child);
@@ -20,10 +20,7 @@ class BlocProvider extends InheritedWidget {
 
 class _BlocState {
   final AuthBloc authBloc;
-  final LoginBloc loginBloc;
+  final RunBloc runBloc;
 
-  _BlocState({
-    this.authBloc,
-    this.loginBloc
-  });
+  _BlocState({this.authBloc, this.runBloc});
 }

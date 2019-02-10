@@ -15,11 +15,15 @@ class _LoginScreenState extends State<LoginScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         RaisedButton(
-          onPressed: () => BlocProvider.of(context).authBloc.googleSignIn(),
+          onPressed: () => signIn(),
           child: Text("Google Sign In"),
           color: Colors.green,
         ),
       ],
     );
+  }
+
+  void signIn(){
+    BlocProvider.of(context).authBloc.googleSignIn();
   }
 }

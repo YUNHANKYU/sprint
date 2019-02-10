@@ -16,18 +16,23 @@ class AuthBloc extends Object {
 
   Function(bool) get setLoading => _doneLoading.sink.add;
 
-  Future<bool> googleSignIn() {
-    return _firebaseAuth.signIn();
+  void googleSignIn() {
+    _firebaseAuth.signIn();
+  }
+
+  void signOut(){
+    _firebaseAuth.signOut();
+    checkAuth();
   }
 
   Future<void> checkAuth() async {
     print("AuthBloc checkAuth start");
-    if (await _firebaseAuth.checkAuth(await _firebaseAuth.getFirebaseUser())) {
+    if (await _firebaseAuth.getFirebaseUser() != null) {
       print("AuthBloc checkAuth true");
       setLoading(false);
       setLoggedIn(true);
     } else {
-      print("AuthBloc checkAuth true");
+      print("AuthBloc checkAuth false");
       setLoggedIn(false);
     }
   }

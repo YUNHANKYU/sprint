@@ -7,7 +7,7 @@ class FirebaseAuthentication {
   final GoogleSignIn _googleSignIn = new GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Future<void> signIn() async {
+  Future<FirebaseUser> signIn() async {
     print("[click GOOGLE SIGN IN button]");
     GoogleSignInAccount googleSignInAccount = await _googleSignIn.signIn();
     GoogleSignInAuthentication googleSignInAuthentication =
@@ -33,6 +33,7 @@ class FirebaseAuthentication {
     }
 
     print("User Name : ${user.displayName}");
+    return currentUser;
   }
 
   Future<bool> checkAuth(FirebaseUser user) async {

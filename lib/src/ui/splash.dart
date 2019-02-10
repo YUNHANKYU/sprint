@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../ui/home/home.dart';
 import '../ui/login.dart';
 import '../blocs/bloc_provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Splash extends StatefulWidget {
   @override

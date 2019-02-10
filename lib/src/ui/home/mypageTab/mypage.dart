@@ -12,11 +12,15 @@ class _MyPageState extends State<MyPage> {
     return Center(
       child: Container(
         child: RaisedButton(
-          onPressed: () => BlocProvider.of(context).authBloc.setLoggedIn(false),
+          onPressed: () => signOut(),
           child: Text("Sign Out"),
           color: Colors.red,
         ),
       ),
     );
+  }
+
+  void signOut() {
+    BlocProvider.of(context).authBloc.signOut();
   }
 }

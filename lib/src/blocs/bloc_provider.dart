@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import '../blocs/auth_bloc.dart' show AuthBloc;
 import '../blocs/run_bloc.dart' show RunBloc;
 
+abstract class BlocBase {
+  void dispose();
+}
+
 class BlocProvider extends InheritedWidget {
   final blocState = new _BlocState(
       authBloc: AuthBloc(),

@@ -4,14 +4,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class RunBloc extends Object {
-  final _loggedIn = StreamController<bool>.broadcast();
+  final _paused = StreamController<bool>.broadcast();
 
-  Stream<bool> get loggedIn => _loggedIn.stream;
+  Stream<bool> get paused => _paused.stream;
 
-  Function(bool) get setLoggedIn => _loggedIn.sink.add;
+  Function(bool) get setPaused => _paused.sink.add;
 
   dispose() {
-    _loggedIn.close();
+    _paused.close();
   }
 
 

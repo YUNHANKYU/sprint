@@ -1,6 +1,6 @@
 # Sprint App
 
-A new Flutter application.
+Sprint App 팀 개발 전 연습 
 
 ## Getting Started
 
